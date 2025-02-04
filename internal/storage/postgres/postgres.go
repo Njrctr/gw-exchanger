@@ -8,7 +8,8 @@ import (
 	_ "github.com/lib/pq"
 )
 
-var CurrencyTable = "currency"
+var CurrencyTable = "currency_rates"
+var BaseCurrency = "RUB"
 
 func NewDB(cfg config.DBConfig) (*sqlx.DB, error) {
 	db, err := sqlx.Open("postgres", fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s sslmode=%s",

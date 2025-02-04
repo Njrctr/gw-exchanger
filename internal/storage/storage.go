@@ -9,7 +9,7 @@ import (
 
 type Currency interface {
 	GetAllRates(ctx context.Context) (map[string]float64, error)
-	GetCurrency(ctx context.Context, key string) (float64, error)
+	GetRate(ctx context.Context, from, to string) (float64, error)
 }
 
 type Repository struct {

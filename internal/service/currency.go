@@ -14,8 +14,8 @@ func NewCurrencyService(repo storage.Currency) *CurrencyService {
 	return &CurrencyService{repo: repo}
 }
 
-func (s *CurrencyService) GetCurrency(ctx context.Context, key string) (float64, error) {
-	return s.repo.GetCurrency(ctx, key)
+func (s *CurrencyService) GetRate(ctx context.Context, from, to string) (float64, error) {
+	return s.repo.GetRate(ctx, from, to)
 }
 
 func (s *CurrencyService) GetAllRates(ctx context.Context) (map[string]float64, error) {
