@@ -37,7 +37,7 @@ func MustLoad() (*Config, error) {
 		return nil, fmt.Errorf("неверный режим запуска: %s", *mode)
 	}
 	if *mode == "release" {
-		confFile = "config_docker.env"
+		confFile = "config_relese.env"
 	}
 
 	if err := godotenv.Load(confFile); err != nil {
